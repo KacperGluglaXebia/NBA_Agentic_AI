@@ -690,7 +690,7 @@ def generate_season_orders(ctx: Ctx) -> pd.DataFrame:
         rows.append(pd.DataFrame({
             "order_id": ids, "customer_id": holders["customer_id"].to_numpy(), "game_id": pd.array([pd.NA] * n, dtype="Int64"),
             "order_type": "SEASON", "order_ts": ts, "channel_code": 6, "status": holders["status"].to_numpy(),
-            "payment_method": pm, "card_last4": last4, "promo_code": None, "ticket_count": 41,
+            "payment_method": pm, "card_last4": last4, "promo_code": pd.array([None] * n, dtype="string"), "ticket_count": 41,
             "subtotal_usd": 0.0, "fees_usd": 0.0, "total_usd": 0.0, "_team_id": team_id,
         }))
     return pd.concat(rows, ignore_index=True)
