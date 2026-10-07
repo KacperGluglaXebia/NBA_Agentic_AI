@@ -1,0 +1,34 @@
+code_type,code,label,description
+channel_code,1,BOX_OFFICE,Arena box office window
+channel_code,2,WEB,hoopspass.example (desktop web)
+channel_code,3,APP,HoopsPass mobile app
+channel_code,4,PHONE,Call center / phone sales
+channel_code,5,RESALE,HoopsPass Resale marketplace (fan-to-fan)
+channel_code,6,SEASON,Season ticket sales team (packages)
+ticket_type_code,STD,Standard,Standard single-game ticket sold at face value or with a promo
+ticket_type_code,SSN,Season package,Game included in a season-ticket package (one SEASON order covers all 41 home games)
+ticket_type_code,GRP,Group,"Group sales, 10+ seats in one order, group discount"
+ticket_type_code,COMP,Complimentary,"Complimentary ticket, sold_price_usd = 0, NOT a sale"
+ticket_type_code,RSL,Resale,Ticket resold by a fan on the Resale marketplace; HoopsPass earns fee + commission only
+price_tier_code,P1,Courtside,Courtside / floor seats
+price_tier_code,P2,Lower center,"Lower bowl, center sections"
+price_tier_code,P3,Lower ends,"Lower bowl, corners and baselines"
+price_tier_code,P4,Club,Club level with lounge access
+price_tier_code,P5,Upper center,"Upper bowl, center sections"
+price_tier_code,P6,Upper ends,"Upper bowl, corners and ends"
+loyalty_tier_code,0,,No HoopsPass Rewards membership
+loyalty_tier_code,1,Rookie,HoopsPass Rewards - entry tier
+loyalty_tier_code,2,Starter,HoopsPass Rewards - 5+ games per season
+loyalty_tier_code,3,All-Star,HoopsPass Rewards - 15+ games or season ticket holder
+loyalty_tier_code,4,MVP,"HoopsPass Rewards - invitation only, top 1% spenders"
+order_status,COMPLETED,Completed,Paid and fulfilled; the only status that counts as a sale
+order_status,REFUNDED,Refunded,Fully refunded after purchase; tickets voided
+order_status,CANCELLED,Cancelled,Cancelled before payment settled; tickets voided
+order_status,CHARGEBACK,Chargeback,Payment disputed and reversed by the bank; tickets voided
+order_type,SINGLE,Single game,Order for one specific game (orders.game_id is set)
+order_type,SEASON,Season package,"Season-ticket package; orders.game_id is NULL, game is on each ticket"
+order_type,GROUP,Group,Group sales order for one game
+order_type,RESALE,Resale,Purchase on the Resale marketplace
+game_type,REG,Regular season,Regular season game (82 per team)
+game_type,PLAYIN,Play-in,Play-in tournament game
+game_type,PLAYOFF,Playoffs,"Playoff game (rounds R1, R2, CONF_FINALS, FINALS)"

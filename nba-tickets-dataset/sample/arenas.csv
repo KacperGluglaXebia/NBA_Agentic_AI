@@ -1,0 +1,31 @@
+arena_id,arena_name,city,state,country,capacity,opened_year,timezone
+101,State Farm Arena,Atlanta,GA,US,16600,1999,America/New_York
+102,Barclays Center,Brooklyn,NY,US,17732,2012,America/New_York
+103,TD Garden,Boston,MA,US,19156,1995,America/New_York
+104,Spectrum Center,Charlotte,NC,US,19077,2005,America/New_York
+105,United Center,Chicago,IL,US,20917,1994,America/Chicago
+106,Rocket Arena,Cleveland,OH,US,19432,1994,America/New_York
+107,American Airlines Center,Dallas,TX,US,19200,2001,America/Chicago
+108,Ball Arena,Denver,CO,US,19520,1999,America/Denver
+109,Little Caesars Arena,Detroit,MI,US,20332,2017,America/Detroit
+110,Chase Center,San Francisco,CA,US,18064,2019,America/Los_Angeles
+111,Toyota Center,Houston,TX,US,18055,2003,America/Chicago
+112,Gainbridge Fieldhouse,Indianapolis,IN,US,17274,1999,America/Indiana/Indianapolis
+113,Intuit Dome,Inglewood,CA,US,18000,2024,America/Los_Angeles
+114,Crypto.com Arena,Los Angeles,CA,US,18997,1999,America/Los_Angeles
+115,FedExForum,Memphis,TN,US,17794,2004,America/Chicago
+116,Kaseya Center,Miami,FL,US,19600,1999,America/New_York
+117,Fiserv Forum,Milwaukee,WI,US,17341,2018,America/Chicago
+118,Target Center,Minneapolis,MN,US,18978,1990,America/Chicago
+119,Smoothie King Center,New Orleans,LA,US,16867,1999,America/Chicago
+120,Madison Square Garden,New York,NY,US,19812,1968,America/New_York
+121,Paycom Center,Oklahoma City,OK,US,18203,2002,America/Chicago
+122,Kia Center,Orlando,FL,US,18846,2010,America/New_York
+123,Xfinity Mobile Arena,Philadelphia,PA,US,20478,1996,America/New_York
+124,Mortgage Matchup Center,Phoenix,AZ,US,17071,1992,America/Phoenix
+125,Moda Center,Portland,OR,US,19393,1995,America/Los_Angeles
+126,Golden 1 Center,Sacramento,CA,US,17608,2016,America/Los_Angeles
+127,Frost Bank Center,San Antonio,TX,US,18418,2002,America/Chicago
+128,Scotiabank Arena,Toronto,ON,CA,19800,1999,America/Toronto
+129,Delta Center,Salt Lake City,UT,US,18306,1991,America/Denver
+130,Capital One Arena,Washington,DC,US,20356,1997,America/New_York

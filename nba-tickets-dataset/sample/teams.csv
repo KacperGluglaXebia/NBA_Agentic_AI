@@ -1,0 +1,31 @@
+team_id,team_code,team_name,city,nickname,state,country,conference,division,sales_region,arena_id
+1,ATL,Atlanta Hawks,Atlanta,Hawks,GA,US,East,Southeast,Southeast,101
+2,BKN,Brooklyn Nets,Brooklyn,Nets,NY,US,East,Atlantic,Northeast,102
+3,BOS,Boston Celtics,Boston,Celtics,MA,US,East,Atlantic,Northeast,103
+4,CHA,Charlotte Hornets,Charlotte,Hornets,NC,US,East,Southeast,Southeast,104
+5,CHI,Chicago Bulls,Chicago,Bulls,IL,US,East,Central,Midwest,105
+6,CLE,Cleveland Cavaliers,Cleveland,Cavaliers,OH,US,East,Central,Midwest,106
+7,DAL,Dallas Mavericks,Dallas,Mavericks,TX,US,West,Southwest,Southwest,107
+8,DEN,Denver Nuggets,Denver,Nuggets,CO,US,West,Northwest,West,108
+9,DET,Detroit Pistons,Detroit,Pistons,MI,US,East,Central,Midwest,109
+10,GSW,Golden State Warriors,Golden State,Warriors,CA,US,West,Pacific,West,110
+11,HOU,Houston Rockets,Houston,Rockets,TX,US,West,Southwest,Southwest,111
+12,IND,Indiana Pacers,Indiana,Pacers,IN,US,East,Central,Midwest,112
+13,LAC,LA Clippers,LA,Clippers,CA,US,West,Pacific,West,113
+14,LAL,Los Angeles Lakers,Los Angeles,Lakers,CA,US,West,Pacific,West,114
+15,MEM,Memphis Grizzlies,Memphis,Grizzlies,TN,US,West,Southwest,Southwest,115
+16,MIA,Miami Heat,Miami,Heat,FL,US,East,Southeast,Southeast,116
+17,MIL,Milwaukee Bucks,Milwaukee,Bucks,WI,US,East,Central,Midwest,117
+18,MIN,Minnesota Timberwolves,Minnesota,Timberwolves,MN,US,West,Northwest,Midwest,118
+19,NOP,New Orleans Pelicans,New Orleans,Pelicans,LA,US,West,Southwest,Southwest,119
+20,NYK,New York Knicks,New York,Knicks,NY,US,East,Atlantic,Northeast,120
+21,OKC,Oklahoma City Thunder,Oklahoma City,Thunder,OK,US,West,Northwest,Southwest,121
+22,ORL,Orlando Magic,Orlando,Magic,FL,US,East,Southeast,Southeast,122
+23,PHI,Philadelphia 76ers,Philadelphia,76ers,PA,US,East,Atlantic,Northeast,123
+24,PHX,Phoenix Suns,Phoenix,Suns,AZ,US,West,Pacific,West,124
+25,POR,Portland Trail Blazers,Portland,Trail Blazers,OR,US,West,Northwest,West,125
+26,SAC,Sacramento Kings,Sacramento,Kings,CA,US,West,Pacific,West,126
+27,SAS,San Antonio Spurs,San Antonio,Spurs,TX,US,West,Southwest,Southwest,127
+28,TOR,Toronto Raptors,Toronto,Raptors,ON,CA,East,Atlantic,Northeast,128
+29,UTA,Utah Jazz,Utah,Jazz,UT,US,West,Northwest,West,129
+30,WAS,Washington Wizards,Washington,Wizards,DC,US,East,Southeast,Southeast,130
