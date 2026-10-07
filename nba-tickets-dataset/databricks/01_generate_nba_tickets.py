@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # HoopsPass · 01 · Generate the NBA ticket-sales dataset
 # MAGIC
@@ -28,7 +32,9 @@ CURATED = f"{CATALOG}.sales"
 RAW = f"{CATALOG}.sales_raw"
 VOLUME = f"/Volumes/{CATALOG}/sales/staging"
 STAGING = f"{VOLUME}/hoopspass_seed{SEED}_scale{SCALE}"
+CATALOG_ROOT = "abfss://sandbox@dbksprojstordev.dfs.core.windows.net/catalogs"
 print(f"catalog={CATALOG} scale={SCALE} seed={SEED}\nstaging={STAGING}")
+
 
 # COMMAND ----------
 
@@ -37,7 +43,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), "..", "generator"))
 import nba_tickets_generator as gen
 import semantic_layer as sem
 
-spark.sql(f"CREATE CATALOG IF NOT EXISTS {CATALOG}")
+spark.sql(f"CREATE CATALOG IF NOT EXISTS {CATALOG} MANAGED LOCATION '{CATALOG_ROOT}/{CATALOG}' ")
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS {CURATED} COMMENT 'HoopsPass curated sales data (Agent B)'")
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS {RAW} COMMENT 'HoopsPass raw extracts, undocumented on purpose (Agent A)'")
 spark.sql(f"CREATE SCHEMA IF NOT EXISTS {CATALOG}.governance COMMENT 'Row filters, column masks and access mapping tables'")
