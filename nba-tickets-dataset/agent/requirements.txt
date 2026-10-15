@@ -1,0 +1,12 @@
+# Code agent of demo C (agent/hoopspass_agent.py, notebook 04). Serverless environment 4+.
+mlflow[databricks]>=3.10.1
+databricks-sdk
+databricks-agents>=1.0
+databricks-langchain>=0.20
+databricks-mcp>=0.9
+langchain>=1.0
+langgraph>=1.2
+nest-asyncio>=1.6
+# mcp 2.x removed mcp.shared.context.RequestContext and breaks `import databricks_langchain`
+# (langchain-mcp-adapters 0.3.1). Lift the cap once the adapter supports mcp 2.
+mcp>=1.20,<2

@@ -15,9 +15,13 @@ The story: *same data, same model, two Genie Agents* — one created with defaul
 | `generator/render_docs.py` | Renders `docs/data_dictionary.md` and `docs/genie_agent_config.md` from `semantic_layer.py`. |
 | `databricks/01_generate_nba_tickets.py` | Databricks notebook: generates parquet into a UC volume, loads `<catalog>.sales` (curated: comments, PK/FK) and `<catalog>.sales_raw` (undocumented + clutter tables). |
 | `databricks/02_curate_and_govern.sql` | Databricks SQL notebook: curated views `v_ticket_sales` / `v_game_sales`, trusted table function, region mapping table, row filter, column masks, `demo_expected_answers`, cleanup. |
+| `databricks/03_knowledge_and_tools.py` | Databricks notebook: policy PDFs into the volume `<catalog>.knowledge.policies`, hand-built RAG (`ai_parse_document` → one chunk per policy section → AI Search index `knowledge.policy_chunks_index`), and the agent tools `agent_tools.team_season_summary` / `agent_tools.order_lookup` in their own schema. |
+| `databricks/04_code_agent.py` | Databricks notebook: the assistant as code — tools from three managed MCP servers (Genie agent B, the policy index, `agent_tools`), route matrix with MLflow traces, LLM judge (`mlflow.genai`), least-privilege attacks, logging to Unity Catalog as a `ResponsesAgent`, optional deployment. |
+| `agent/` | `hoopspass_agent.py` (LangGraph agent + `ResponsesAgent`, models from code), `agent_config.yaml` (model, system prompt), `requirements.txt`. |
+| `knowledge/policies/*.md` | Eight synthetic HoopsPass policies (refunds, fees, resale, season tickets, rewards, gate entry, allocation and comps, privacy), consistent with the generator's rules. `generator/render_policies.py` renders them to `knowledge/pdf/`. |
 | `docs/data_dictionary.md` | Every table and column, business definitions, the six traps and which configuration layer fixes each. |
 | `docs/genie_agent_config.md` | Copy-paste configuration for agent A (raw) and agent B (curated): sources, hidden columns, synonyms, SQL expressions, instructions, example queries, benchmarks. |
-| `docs/demo_script.md` | The two demo blocks question by question, with expected answers and what to point at. |
+| `docs/demo_script.md` | The three demo blocks (raw agent, curated agent, assistant) question by question, with expected answers and what to point at. |
 | `sample/` | CSV extract at `--scale 0.01` (all tables, small) for a quick look without Databricks. |
 
 ## Run it on Databricks (Premium workspace)
@@ -27,7 +31,9 @@ The story: *same data, same model, two Genie Agents* — one created with defaul
 3. Create two account groups: `hoopspass_all_regions` and `hoopspass_pii_readers`; add yourself to both. Create (or pick) a second user that is in neither — the "regional manager".
 4. Open `databricks/02_curate_and_govern`, put the second user's e-mail into the `MERGE` statement, and run everything **except** the *Apply* cell (you run that one live during the demo). Check `demo_expected_answers`.
 5. Create the two Genie Agents exactly as described in `docs/genie_agent_config.md`, give the regional user CAN RUN on agent B, and run the benchmarks on both agents the day before.
-6. Rehearse with `docs/demo_script.md`.
+6. Run `databricks/03_knowledge_and_tools` (widget `search_endpoint` = an existing AI Search endpoint) and then `databricks/04_code_agent`. Keep 04's output: demo C shows its route matrix, traces and judge scores.
+7. In AI Playground, prepare the no-code assistant described in `docs/demo_script.md` (demo C).
+8. Rehearse with `docs/demo_script.md`.
 
 To rehearse cheaply use `scale = 0.1` (same traps, ~730k tickets); switch back to `1.0` for the recording.
 
