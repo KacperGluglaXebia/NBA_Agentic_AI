@@ -2,7 +2,7 @@
 # (looked up by the title of Genie agent B) and points HOOPSPASS_AGENT_CONFIG at the copy.
 catalog: hoopspass
 genie_space_id: "<filled in by notebook 04>"
-llm_endpoint: databricks-claude-sonnet-4-6
+llm_endpoint: databricks-claude-sonnet-5-5
 system_prompt: |
   You are the HoopsPass assistant for business teams. HoopsPass sells NBA tickets on behalf of the HOME team, season 2025-26.
   Answer in English, briefly, for a non-technical reader.

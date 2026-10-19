@@ -22,7 +22,7 @@
 
 dbutils.widgets.text("catalog", "hoopspass", "Catalog")
 dbutils.widgets.text("genie_title", "HoopsPass Sales Assistant", "Genie agent B title")
-dbutils.widgets.text("llm_endpoint", "databricks-claude-sonnet-4-6", "LLM endpoint")
+dbutils.widgets.text("llm_endpoint", "databricks-claude-sonnet-5-5", "LLM endpoint")
 dbutils.widgets.dropdown("deploy", "false", ["false", "true"], "Deploy to Model Serving")
 
 import logging, os, sys, time
