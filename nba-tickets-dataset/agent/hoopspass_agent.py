@@ -97,7 +97,8 @@ class HoopsPassAgent(ResponsesAgent):
             DatabricksMCPServer(name=label, url=url, workspace_client=self.w) for label, url in self.servers.items()])
         tools = await client.get_tools()
         return create_agent(
-            model=ChatDatabricks(endpoint=config.get("llm_endpoint"), temperature=0.0),
+            # No temperature: Claude Sonnet 5.5 rejects the parameter (400 BAD_REQUEST).
+            model=ChatDatabricks(endpoint=config.get("llm_endpoint")),
             tools=tools,
             system_prompt=config.get("system_prompt"),
         )
